@@ -9,7 +9,7 @@ def mutate(c):
 	n = c.inputDim		# get dimension of search vector
 	
 	for i in range(n):	
-		# sample delta from a distribution chosen to imitate binary crossover
+		# sample delta from a distribution chosen to imitate binary mutation
 		u = np.random.rand()
 		if u <= 0.5:
 			delta = pow(2*u, (1/(mutationEta + 1))) - 1
