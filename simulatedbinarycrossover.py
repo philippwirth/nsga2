@@ -4,12 +4,11 @@ crossoverEta = 2.0
 
 def crossover(p0, p1):
 
-	n = p0.inputDim
-	c0 = np.zeros(n)
+	n = p0.inputDim		# get dimension of search vector
+	c0 = np.zeros(n)	# initialize vectors to store children
 	c1 = np.zeros(n)
 
 	for i in range(n):
-
 		# compute spread factor beta according to a polynomial distribution
 		u = np.random.rand()
 		if u <= 0.5:
